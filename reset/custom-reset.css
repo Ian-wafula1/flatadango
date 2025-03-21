@@ -1,0 +1,86 @@
+@supports (font-size-adjust: 1) {
+	p,
+	article {
+		font-size-adjust: 0.5;
+	}
+}
+
+ol[role='list'],
+ul[role='list'] {
+	list-style: none;
+	padding-inline: 0;
+}
+
+input[type='search']:not(:focus, :active)::-webkit-search-cancel-button {
+	display: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	font-size: 1.6rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+	hyphens: auto;
+	/* hyphens: none; */
+}
+
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+a {
+	hyphens: none;
+}
