@@ -23,4 +23,4 @@ Download the db.json file and run the following command in the file's directory.
 
 ```json-server --watch db.json```
 
-Use this [link]() to view the page on your browser
+Use this [link](https://ian-wafula1.github.io/flatadango/) to view the page on your browser
