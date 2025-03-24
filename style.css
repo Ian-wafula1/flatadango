@@ -1,9 +1,136 @@
+:root {
+    --black: #00041A;
+    --deep-blue: #040B28;
+    --light-blue: #465772;
+    --white-blue: #e3e7ec;
+}
+
 main {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
 }
 
+header {
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+    color: white;
+    font-size: 1.2em;
+    background-color: var(--black);
+}
+
+header > * {
+    position: relative;
+}
+
+header > *::before {
+    position: absolute;
+    content: '';
+    width: 1.3em;
+    height: 1.3em;
+    background-image: url('./assets/movie-ticket-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    top: .5rem;
+    left: -6rem;
+}
+
+.film-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    align-items: center;
+}
+
+.film {
+    position: relative;
+    cursor: pointer;
+}
+
+.delete-button {
+    display: inline-block;
+    position: absolute;
+    bottom: 3px;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-image: url('./assets/trash-bin-trash-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+/* .sold-out {} */
+
+/* div.divider:not(:last-child) {
+    background-color: slategrey;
+    width: 50%;
+    height: 1px;
+
+} */
+
 img {
     width: 40rem;
+    height: max(100%, 86.3vh);
+}
+
+.card {
+    margin: 2rem;
+    border: 2px solid var(--black);
+    height: 34rem;
+    background-color: var(--white-blue);
+    border-radius: 16px;
+}
+
+.card > div:first-child {
+    background-color: var(--deep-blue);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    padding: 1.5rem;
+}
+
+div:has(> .showtime) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.showtime, .card button {
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    padding: .3rem 1rem;
+    background-color: var(--light-blue);
+    color: white;
+    /* display: grid;
+    place-content: center; */
+}
+.card .runtime {
+    color: blue;
+}
+/* 
+ {
+    padding: 0.1rem 1rem;
+    background-color: var(--light-blue);
+    color: white;
+    border: 1px solid;
+} */
+
+[type="number"] {
+    width: 3.6rem;
+    padding: .2rem 0 ;
+    text-align: left;
+    border-radius: 4px;
+    color: black;
+    border: 1.5px solid var(--black);
+}
+
+.card .title {
+    font-size: 1.2em;
+}
+
+.card > * {
+    padding: 1rem;
+
 }

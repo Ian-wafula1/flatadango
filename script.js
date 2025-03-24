@@ -19,15 +19,13 @@ async function fetchFunc() {
 				console.log(this);
 				card.innerHTML = `
             <div>
-				<p class="title">Title: ${this.title}</p>
-				<p class="runtime">Runtime: ${this.runtime} minutes</p>
+				<p class="title">${this.title}</p>
+				<p>Runtime: <span class="runtime">${this.runtime} minutes</span></p>
 			</div>
+			<p class="description">${this.description}</p>
 			<div>
-				<p class="description">${this.description}</p>
-				<div>
-					<div class="showtime">${this.showtime}</div>
-					<div>Remaining Tickets: <span class="tickets-remaining">${this.capacity - this.tickets_sold}</span></div>
-				</div>
+				<div class="showtime">${this.showtime}</div>
+				<div>Remaining Tickets: <span class="tickets-remaining">${this.capacity - this.tickets_sold}</span></div>
 			</div>
 			<div>
 				<button class="buy-btn">Crap</button>
