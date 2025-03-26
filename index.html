@@ -10,6 +10,20 @@
 		<script defer src="./script.js"></script>
 	</head>
 	<body>
+		<dialog>
+			<form>
+				<label for="title">Title: <input type="text" name="title" id="title" required /></label>
+				<label for="runtime">Runtime: <input type="number" min="1" name="runtime" id="runtime" required /></label>
+				<label for="capacity">Capacity: <input type="number" min="1" name="capacity" id="capacity" required /></label>
+				<label for="showtime">Showtime: <input type="text" name="showtime" id="showtime" required /></label>
+				<label for="description">Description<input type="text" name="description" id="description" required /></label>
+				<label for="poster-image">Poster Image Link:<input type="url" name="poster-image" id="poster-image" required /></label>
+				<div class="buttons">
+					<button type="button" id="cancel">Cancel</button>
+					<button type="submit" id="add">Add</button>
+				</div>
+			</form>
+		</dialog>
 		<header>
 			<h1>Flatadango</h1>
 		</header>
@@ -17,6 +31,7 @@
 		<main>
 			<div class="sidebar">
 				<ul class="film-list"></ul>
+				<button class="add"></button>
 			</div>
 			<img class="poster" />
 			<div class="card"></div>
